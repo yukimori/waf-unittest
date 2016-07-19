@@ -4,5 +4,5 @@
 
 TEST(test, test)
 {
-  EXPECT_EQ(foo(123), 123+123);
+  EXPECT_EQ(foo(123), 123*123);
 }

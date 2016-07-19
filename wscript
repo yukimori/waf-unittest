@@ -17,6 +17,11 @@ def build(bld):
         includes = '.',
         target = 'lib')
 
+    bld.stlib(
+        source = 'myint.cpp',
+        includes = '.',
+        target = 'myint')
+
     bld.program(features = 'gtest',
                 source = 'test.cpp',
                 includes = '.',
@@ -28,6 +33,24 @@ def build(bld):
                 includes = '.',
                 target = 'test2',
                 use = 'lib')
+
+    bld.program(features = 'gtest',
+                source = 'gtest_example.cpp',
+                includes = '.',
+                target = 'gtest_example',
+                use = 'lib')
+
+    bld.program(features = 'gtest',
+                source = 'gtest_example2.cpp',
+                includes = '.',
+                target = 'gtest_example2',
+                use = '')
+
+    bld.program(features = 'gtest',
+                source = ['gtest_myint.cpp'],
+                includes = '.',
+                target = 'gtest_myint',
+                use = 'myint')
 
 def shutdown(ctx):
     pass
