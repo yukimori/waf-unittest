@@ -19,5 +19,5 @@ bool MyInt::isOdd() {
 }
 
 bool MyInt::isEven() {
-    return isOdd();  //ここにバグがある
+    return !isOdd();
 }

@@ -1,6 +1,12 @@
 Yet Another Waf Unittest
 ========================
 
+hisotry
+----
+ref:http://qiita.com/tjun/items/8047bf50930e6de36bdc
+のサンプルコードを追加
+
+
 About
 -----
 
