@@ -1,8 +1,7 @@
+
 #include <gtest/gtest.h>
+#include "./lib.h"
 
-#include "lib.h"
-
-TEST(test, test)
-{
+TEST(testcase2, test2_1) {
   EXPECT_EQ(foo(123), 123*123);
 }

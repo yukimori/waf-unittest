@@ -22,35 +22,39 @@ def build(bld):
         includes = '.',
         target = 'myint')
 
-    bld.program(features = 'gtest',
-                source = 'test.cpp',
-                includes = '.',
-                target = 'test',
-                use = 'lib')
+    # tab indentはエラーになる
+    bld.program(
+		features = 'gtest',
+		source = ['test.cpp', 'test2.cpp'],
+		includes = ".",
+		target = 'test',
+		use = ['lib'],
+	)
 
-    bld.program(features = 'gtest',
-                source = 'test2.cpp',
-                includes = '.',
-                target = 'test2',
-                use = 'lib')
 
-    bld.program(features = 'gtest',
-                source = 'gtest_example.cpp',
-                includes = '.',
-                target = 'gtest_example',
-                use = 'lib')
+    # bld.program(features = 'gtest',
+    #             source = 'test2.cpp',
+    #             includes = '.',
+    #             target = 'test2',
+    #             use = 'lib')
 
-    bld.program(features = 'gtest',
-                source = 'gtest_example2.cpp',
-                includes = '.',
-                target = 'gtest_example2',
-                use = '')
+    # bld.program(features = 'gtest',
+    #             source = 'gtest_example.cpp',
+    #             includes = '.',
+    #             target = 'gtest_example',
+    #             use = 'lib')
 
-    bld.program(features = 'gtest',
-                source = ['gtest_myint.cpp'],
-                includes = '.',
-                target = 'gtest_myint',
-                use = 'myint')
+    # bld.program(features = 'gtest',
+    #             source = 'gtest_example2.cpp',
+    #             includes = '.',
+    #             target = 'gtest_example2',
+    #             use = '')
+
+    # bld.program(features = 'gtest',
+    #             source = ['gtest_myint.cpp'],
+    #             includes = '.',
+    #             target = 'gtest_myint',
+    #             use = 'myint')
 
 def shutdown(ctx):
     pass
